@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Zeyada
+- Font Author: Copyright (c) 2010, Kimberly Geswein (kimberlygeswein.com kimberlygeswein@gmail.com)
+- Font Source: https://fonts.gstatic.com/s/zeyada/v19/11hAGpPTxVPUbgZDNGatWKaZ3g.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
