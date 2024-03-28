@@ -28,4 +28,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgements
 
 - Flexify makes use of the flexbox layout model.
-- Special thanks to [Your Name] for inspiration and guidance.
+
