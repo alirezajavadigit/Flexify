@@ -1,35 +1,28 @@
-/* Define a custom font-face named "vazir" */
+/* Font face declaration for custom font */
 @font-face {
-  font-family: "vazir"; /* Set the font family name */
-  /* Specify the font sources */
+  font-family: "vazir";
   src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff2"),
     url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff"),
     url("../fonts/vazir/Vazir-Medium-FD-WOL.ttf") format("truetype");
 }
 
-/* Define CSS variables for color palette, typography, and shadows */
+/* Root variables for consistent color and font usage */
 :root {
-  /* Primary Colors */
-  --clr-primary-1: #5a189a;
-  --clr-primary-2: #7b2cbf;
-  --clr-primary-3: #9d4edd;
-  /* Grey Shades */
-  --clr-grey-1: #102a42;
-  --clr-grey-2: #617d98;
-  --clr-grey-3: #9eb2c7;
-  --clr-grey-4: #f1f5f8;
-  /* White Color */
-  --clr-white: #fff;
-  /* Primary Font Family */
-  --ff-primary: "vazir", sans-serif;
-  /* Transition Duration */
-  --transition: all 0.3s linear;
-  /* Shadows */
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --clr-primary-1: #5a189a; /* Primary color shade 1 */
+  --clr-primary-2: #7b2cbf; /* Primary color shade 2 */
+  --clr-primary-3: #9d4edd; /* Primary color shade 3 */
+  --clr-grey-1: #102a42; /* Grey shade 1 */
+  --clr-grey-2: #617d98; /* Grey shade 2 */
+  --clr-grey-3: #9eb2c7; /* Grey shade 3 */
+  --clr-grey-4: #f1f5f8; /* Grey shade 4 */
+  --clr-white: #fff; /* White */
+  --ff-primary: "vazir", sans-serif; /* Primary font */
+  --transition: all 0.3s linear; /* Transition effect */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Dark shadow */
 }
 
-/* Reset default margin, padding, and box-sizing */
+/* Global reset */
 * {
   margin: 0;
   padding: 0;
@@ -38,27 +31,27 @@
 
 /* Body styles */
 body {
-  font-family: var(--ff-primary); /* Use the primary font family */
-  background: var(--clr-white); /* Set background color to white */
-  color: var(--clr-grey-1); /* Set text color */
+  font-family: var(--ff-primary); /* Set primary font */
+  background: var(--clr-white); /* White background */
+  color: var(--clr-grey-1); /* Dark grey text color */
   line-height: 1.5; /* Set line height */
-  font-size: 0.875rem; /* Set default font size */
+  font-size: 0.875rem; /* Set base font size */
 }
 
 /* List styles */
 ul {
-  list-style-type: none; /* Remove list bullet points */
+  list-style-type: none; /* Remove list styles */
 }
 
-/* Link styles */
+/* Anchor styles */
 a {
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none; /* Remove underline */
 }
 
 /* Image styles */
 img {
-  width: 100%; /* Make images responsive */
-  display: block; /* Make images block-level elements */
+  width: 100%; /* Ensure images fill container */
+  display: block; /* Make images block-level */
 }
 
 /* Heading styles */
@@ -66,56 +59,124 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.25; /* Set line height for headings */
-  margin-bottom: 0.75rem; /* Set bottom margin for headings */
+  line-height: 1.25; /* Set heading line height */
+  margin-bottom: 0.75rem; /* Set heading bottom margin */
 }
-
-/* Heading specific styles */
 h1 {
-  font-size: 3rem; /* Set font size for h1 */
+  font-size: 3rem; /* Heading 1 font size */
 }
-
 h2 {
-  font-size: 2rem; /* Set font size for h2 */
+  font-size: 2rem; /* Heading 2 font size */
 }
-
 h3 {
-  font-size: 1.25rem; /* Set font size for h3 */
+  font-size: 1.25rem; /* Heading 3 font size */
 }
-
 h4 {
-  font-size: 0.875rem; /* Set font size for h4 */
+  font-size: 0.875rem; /* Heading 4 font size */
 }
-
-/* Paragraph styles */
 p {
-  margin-bottom: 1.25rem; /* Set bottom margin for paragraphs */
-  color: var(--clr-grey-2); /* Set text color for paragraphs */
+  margin-bottom: 1.25rem; /* Set paragraph bottom margin */
+  color: var(--clr-grey-2); /* Grey text color */
 }
 
 /* Media query for larger screens */
 @media screen and (min-width: 800px) {
+  /* Adjust heading sizes */
   h2 {
-    font-size: 2.5rem; /* Increase font size for h2 on larger screens */
+    font-size: 2.5rem;
   }
-
   h3 {
-    font-size: 1.75rem; /* Increase font size for h3 on larger screens */
+    font-size: 1.75rem;
   }
-
   h4 {
-    font-size: 1rem; /* Increase font size for h4 on larger screens */
+    font-size: 1rem;
   }
-
   body {
-    font-size: 1rem; /* Increase default font size on larger screens */
+    font-size: 1rem; /* Reset body font size */
   }
-
-  /* Reset line height for headings on larger screens */
+  /* Reset heading line height */
   h1,
   h2,
   h3,
   h4 {
-    line-height: 1; /* Set line height to 1 */
+    line-height: 1;
+  }
+}
+
+/* Button styles */
+.btn {
+  background: var(--clr-primary-2); /* Button background color */
+  color: var(--clr-white); /* Button text color */
+  padding: 0.375rem 0.75rem; /* Button padding */
+  display: inline-block; /* Make button inline */
+  transition: var(--transition); /* Add transition effect */
+  font-size: 0.875rem; /* Button font size */
+  border: 2px solid transparent; /* Button border */
+  cursor: pointer; /* Change cursor to pointer */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Add button shadow */
+}
+
+/* Button hover styles */
+.btn:hover {
+  color: var(--clr-primary-1); /* Change text color on hover */
+  background: var(--clr-primary-3); /* Change background color on hover */
+}
+
+/* Hero section styles */
+.hero {
+  min-height: 100vh; /* Set minimum height */
+  background-color: var(--clr-primary-2); /* Hero background color */
+  display: flex; /* Flex display */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Hero banner styles */
+.hero-banner {
+  padding: 0 3rem; /* Add padding */
+  text-align: center; /* Center text */
+}
+.hero-banner h1 {
+  color: var(--clr-white); /* White heading color */
+  margin-bottom: 3rem; /* Add bottom margin */
+}
+
+.hero-banner p {
+  max-width: 35rem; /* Set maximum width */
+  color: var(--clr-white); /* White text color */
+  margin-bottom: 2rem; /* Add bottom margin */
+}
+
+/* Hero button styles */
+.btn-hero {
+  padding: 0.5rem 1.2rem; /* Button padding */
+  font-size: 1rem; /* Button font size */
+  background: var(--clr-white); /* Button background color */
+  color: var(--clr-primary-2); /* Button text color */
+}
+
+/* Hero button hover styles */
+.btn-hero:hover {
+  background: transparent; /* Make background transparent on hover */
+  color: var(--clr-white); /* Change text color on hover */
+  border-color: var(--clr-white); /* Change border color on hover */
+}
+
+/* Media query for tablets */
+@media screen and (min-width: 768px) {
+  /* Hero background styles */
+  .hero {
+    background: linear-gradient(rgb(199, 125, 255, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../images/main.jpg") center/cover no-repeat; /* Hero background */
+  }
+
+  /* Adjust hero banner padding */
+  .hero-banner {
+    padding: 0; /* Remove padding */
+  }
+
+  /* Adjust hero banner paragraph width */
+  .hero-banner p {
+    max-width: 45rem; /* Increase max width */
   }
 }
