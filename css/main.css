@@ -103,6 +103,31 @@ p {
   }
 }
 
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title span {
+  color: var(--clr-primary-2);
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
 /* Button styles */
 .btn {
   background: var(--clr-primary-2); /* Button background color */
@@ -161,22 +186,93 @@ p {
   color: var(--clr-white); /* Change text color on hover */
   border-color: var(--clr-white); /* Change border color on hover */
 }
-
-/* Media query for tablets */
+/* 
+ * Media query for tablets 
+ */
 @media screen and (min-width: 768px) {
-  /* Hero background styles */
+  /* 
+   * Hero background styles 
+   */
   .hero {
     background: linear-gradient(rgb(199, 125, 255, 0.7), rgba(0, 0, 0, 0.7)),
       url("../images/main.jpg") center/cover no-repeat; /* Hero background */
+    background-attachment: fixed; /* Fix background position */
   }
 
-  /* Adjust hero banner padding */
+  /* 
+   * Adjust hero banner padding 
+   */
   .hero-banner {
     padding: 0; /* Remove padding */
   }
 
-  /* Adjust hero banner paragraph width */
+  /* 
+   * Adjust hero banner paragraph width 
+   */
   .hero-banner p {
     max-width: 45rem; /* Increase max width */
+  }
+}
+
+/* 
+ * Styling for about section images 
+ */
+.about-img {
+  margin-bottom: 2rem; /* Add margin at bottom */
+}
+
+/* 
+ * Media query for medium desktop screens 
+ */
+@media screen and (min-width: 992px) {
+  /* 
+   * Centering about section content 
+   */
+  .about-center {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space content evenly */
+  }
+
+  /* 
+   * Adjust margin for about section images 
+   */
+  .about-img {
+    margin-bottom: 0; /* Remove margin */
+  }
+
+  /* 
+   * Styling for about section images and info 
+   */
+  .about-img,
+  .about-info {
+    flex: 0 0 calc(50% - 2rem); /* Set flex basis */
+    align-self: center; /* Align items */
+  }
+}
+
+/* 
+ * Media query for large desktop screens 
+ */
+@media screen and (min-width: 1170px) {
+  /* 
+   * Positioning for about section images 
+   */
+  .about-img {
+    position: relative; /* Set position */
+  }
+
+  /* 
+   * Styling for before pseudo-element 
+   */
+  .about-img::before {
+    content: ""; /* Add content */
+    border: 0.5rem solid var(--clr-primary-2); /* Border style */
+    width: 100%; /* Set width */
+    height: 100%; /* Set height */
+    position: absolute; /* Set position */
+    box-sizing: border-box; /* Include border in box sizing */
+    top: -1rem; /* Position from top */
+    right: -1rem; /* Position from right */
+    z-index: -1; /* Set z-index */
   }
 }
