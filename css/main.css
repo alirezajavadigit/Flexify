@@ -1,0 +1,121 @@
+/* Define a custom font-face named "vazir" */
+@font-face {
+  font-family: "vazir"; /* Set the font family name */
+  /* Specify the font sources */
+  src: url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff2"),
+    url("../fonts/vazir/Vazir-Medium-FD-WOL.woff") format("woff"),
+    url("../fonts/vazir/Vazir-Medium-FD-WOL.ttf") format("truetype");
+}
+
+/* Define CSS variables for color palette, typography, and shadows */
+:root {
+  /* Primary Colors */
+  --clr-primary-1: #5a189a;
+  --clr-primary-2: #7b2cbf;
+  --clr-primary-3: #9d4edd;
+  /* Grey Shades */
+  --clr-grey-1: #102a42;
+  --clr-grey-2: #617d98;
+  --clr-grey-3: #9eb2c7;
+  --clr-grey-4: #f1f5f8;
+  /* White Color */
+  --clr-white: #fff;
+  /* Primary Font Family */
+  --ff-primary: "vazir", sans-serif;
+  /* Transition Duration */
+  --transition: all 0.3s linear;
+  /* Shadows */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset default margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: var(--ff-primary); /* Use the primary font family */
+  background: var(--clr-white); /* Set background color to white */
+  color: var(--clr-grey-1); /* Set text color */
+  line-height: 1.5; /* Set line height */
+  font-size: 0.875rem; /* Set default font size */
+}
+
+/* List styles */
+ul {
+  list-style-type: none; /* Remove list bullet points */
+}
+
+/* Link styles */
+a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Image styles */
+img {
+  width: 100%; /* Make images responsive */
+  display: block; /* Make images block-level elements */
+}
+
+/* Heading styles */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25; /* Set line height for headings */
+  margin-bottom: 0.75rem; /* Set bottom margin for headings */
+}
+
+/* Heading specific styles */
+h1 {
+  font-size: 3rem; /* Set font size for h1 */
+}
+
+h2 {
+  font-size: 2rem; /* Set font size for h2 */
+}
+
+h3 {
+  font-size: 1.25rem; /* Set font size for h3 */
+}
+
+h4 {
+  font-size: 0.875rem; /* Set font size for h4 */
+}
+
+/* Paragraph styles */
+p {
+  margin-bottom: 1.25rem; /* Set bottom margin for paragraphs */
+  color: var(--clr-grey-2); /* Set text color for paragraphs */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 800px) {
+  h2 {
+    font-size: 2.5rem; /* Increase font size for h2 on larger screens */
+  }
+
+  h3 {
+    font-size: 1.75rem; /* Increase font size for h3 on larger screens */
+  }
+
+  h4 {
+    font-size: 1rem; /* Increase font size for h4 on larger screens */
+  }
+
+  body {
+    font-size: 1rem; /* Increase default font size on larger screens */
+  }
+
+  /* Reset line height for headings on larger screens */
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1; /* Set line height to 1 */
+  }
+}
