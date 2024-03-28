@@ -14,7 +14,7 @@ Flexify is a lightweight HTML/CSS project showcasing the power and simplicity of
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/Flexify.git
+    git clone https://github.com/alirezajavadigit/Flexify.git
     ```
 
 2. Open `index.html` in your preferred web browser.
